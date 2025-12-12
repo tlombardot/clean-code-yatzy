@@ -4,24 +4,25 @@ declare(strict_types=1);
 
 namespace Yatzy;
 
-//Class yatzy doit être écrit en majuscule au début : Yatzy (Pascal Case)
-class yatzy
+class Yatzy
 {
+
     /**
      * @var array<int, int>
      */
     private array $dice;
 
-    //Changement nom de variable pour $_5 → $d5
+
+
     //Améliorer la fonction pour qu'elle soit moins longue par exemple une boucle for
-    public function __construct(int $d1, int $d2, int $d3, int $d4, int $_5)
+    public function __construct(int $d1, int $d2, int $d3, int $d4, int $d5)
     {
         $this->dice = array_fill(0, 5, 0);
         $this->dice[0] = $d1;
         $this->dice[1] = $d2;
         $this->dice[2] = $d3;
         $this->dice[3] = $d4;
-        $this->dice[4] = $_5;
+        $this->dice[4] = $d5;
     }
 
     //Améliorer la fonction pour qu'elle soit moins longue par exemple une boucle for
