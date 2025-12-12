@@ -62,18 +62,6 @@ class Yatzy
         return $sum;
     }
 
-
-    public function fours(): int
-    {
-        $sum = 0;
-        for ($at = 0; $at !== 5; $at++) {
-            if ($this->dice[$at] === 4) {
-                $sum += 4;
-            }
-        }
-        return $sum;
-    }
-
     public function Fives(): int
     {
         $s = 0;
