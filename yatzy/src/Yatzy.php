@@ -141,16 +141,6 @@ class Yatzy
         return $sum;
     }
 
-    public function sevens(): int
-    {
-        $sum = 0;
-        for ($at = 0; $at < 5; $at++) {
-            if ($this->dice[$at] === 7) {
-                $sum = $sum + 7;
-            }
-        }
-        return $sum;
-    }
 
     //Trop d'arguments dans la fonction, à mettre dans un objet
     public function score_pair(int $d1, int $d2, int $d3, int $d4, int $d5): int
