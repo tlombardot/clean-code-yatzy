@@ -14,7 +14,6 @@ class Yatzy
 
 
 
-    //Améliorer la fonction pour qu'elle soit moins longue par exemple une boucle for
     public function __construct(int $d1, int $d2, int $d3, int $d4, int $d5)
     {
         $this->dice = array_fill(0, 5, 0);
@@ -25,8 +24,7 @@ class Yatzy
         $this->dice[4] = $d5;
     }
 
-    //Améliorer la fonction pour qu'elle soit moins longue par exemple une boucle for
-    public static function chance(int $d1, int $d2, int $d3, int $d4, int $d5): int
+    public static function addSommeDice(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $total = 0;
         $total += $d1;
@@ -38,13 +36,13 @@ class Yatzy
     }
 
     /**
-     * @param array<int, int> $dice
+     * @param array<int, int> $dices
      */
-    public static function yatzyScore(array $dice): int //Nommage fonction incomprehensible
+    public static function yatzyScore(array $dices): int
     {
         $counts = array_fill(0, 6, 0);
-        foreach ($dice as $die) { //Nommage incorrect die ??
-            ++$counts[$die - 1]; //Incomprehensible
+        foreach ($dices as $dice) {
+            ++$counts[$dice - 1]; //Incomprehensible
         }
         foreach (range(0, count($counts) - 1) as $i) {
             if ($counts[$i] === 5) {            //à refaire compliquer à comprendre
