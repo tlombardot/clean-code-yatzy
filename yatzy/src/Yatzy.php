@@ -63,28 +63,6 @@ class Yatzy
     }
 
 
-    public static function threes(int $d1, int $d2, int $d3, int $d4, int $d5): int
-    {
-        $s = 0;
-        if ($d1 === 3) {
-            $s += 3;
-        }
-        if ($d2 === 3) {
-            $s += 3;
-        }
-        if ($d3 === 3) {
-            $s += 3;
-        }
-        if ($d4 === 3) {
-            $s += 3;
-        }
-        if ($d5 === 3) {
-            $s += 3;
-        }
-
-        return $s;
-    }
-
     public function fours(): int
     {
         $sum = 0;
