@@ -48,27 +48,18 @@ class Yatzy
         return 0;
     }
 
-    //Trop de if, trop de variable fonction trop longue
-    public static function ones(int $d1, int $d2, int $d3, int $d4, int $d5): int
+    /**
+     * @param array<int, int> $dices
+     */
+    public static function numberOfOnes(array $dices): int
     {
         $sum = 0;
-        if ($d1 === 1) {
-            ++$sum;
+        foreach ($dices as $dice) {
+            if($dice === 1) {
+                $sum += 1;
+            }
         }
-        if ($d2 === 1) {
-            ++$sum;
-        }
-        if ($d3 === 1) {
-            ++$sum;
-        }
-        if ($d4 === 1) {
-            ++$sum;
-        }
-        if ($d5 === 1) {
-            ++$sum;
-        }
-
-        return $sum;    //Nommage pas clair
+        return $sum;
     }
 
     //Même chose pour la suite
