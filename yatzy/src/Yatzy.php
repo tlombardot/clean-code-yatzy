@@ -24,7 +24,7 @@ class Yatzy
         $this->dice[4] = $d5;
     }
 
-    public static function addSommeDice(int $d1, int $d2, int $d3, int $d4, int $d5): int
+    public static function addSumDice(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $total = 0;
         $total += $d1;
