@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Yatzy;
 
+//Class yatzy doit être écrit en majuscule au début : Yatzy (Pascal Case)
 class yatzy
 {
     /**
@@ -11,6 +12,8 @@ class yatzy
      */
     private array $dice;
 
+    //Changement nom de variable pour $_5 → $d5
+    //Améliorer la fonction pour qu'elle soit moins longue par exemple une boucle for
     public function __construct(int $d1, int $d2, int $d3, int $d4, int $_5)
     {
         $this->dice = array_fill(0, 5, 0);
@@ -21,6 +24,7 @@ class yatzy
         $this->dice[4] = $_5;
     }
 
+    //Améliorer la fonction pour qu'elle soit moins longue par exemple une boucle for
     public static function chance(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $total = 0;
@@ -35,19 +39,21 @@ class yatzy
     /**
      * @param array<int, int> $dice
      */
-    public static function yatzyScore(array $dice): int
+    public static function yatzyScore(array $dice): int //Nommage fonction incomprehensible
     {
         $counts = array_fill(0, 6, 0);
-        foreach ($dice as $die) {
-            ++$counts[$die - 1];
+        foreach ($dice as $die) { //Nommage incorrect die ??
+            ++$counts[$die - 1]; //Incomprehensible
         }
         foreach (range(0, count($counts) - 1) as $i) {
-            if ($counts[$i] === 5) {
+            if ($counts[$i] === 5) {            //à refaire compliquer à comprendre
                 return 50;
             }
         }
         return 0;
     }
+
+    //Commentaire inutile (Code Legacy)
 
     /*public static function oldYatzyScore(array $dice): int
     {
@@ -64,6 +70,7 @@ class yatzy
         return 0;
     }*/
 
+    //Trop de if, trop de variable fonction trop longue
     public static function ones(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $sum = 0;
@@ -83,9 +90,10 @@ class yatzy
             ++$sum;
         }
 
-        return $sum;
+        return $sum;    //Nommage pas clair
     }
 
+    //Même chose pour la suite
     public static function twos(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $sum = 0;
@@ -175,6 +183,7 @@ class yatzy
         return $sum;
     }
 
+    //Trop d'arguments dans la fonction, à mettre dans un objet
     public function score_pair(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $counts = array_fill(0, 6, 0);
