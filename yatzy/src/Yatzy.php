@@ -62,30 +62,6 @@ class Yatzy
         return $sum;
     }
 
-    public function Fives(): int
-    {
-        $s = 0;
-        $i = 0;
-        for ($i = 0; $i < 5; $i++) {
-            if ($this->dice[$i] === 5) {
-                $s = $s + 5;
-            }
-        }
-        return $s;
-    }
-
-    public function sixes(): int
-    {
-        $sum = 0;
-        for ($at = 0; $at < 5; $at++) {
-            if ($this->dice[$at] === 6) {
-                $sum = $sum + 6;
-            }
-        }
-        return $sum;
-    }
-
-
     //Trop d'arguments dans la fonction, à mettre dans un objet
     public function score_pair(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
