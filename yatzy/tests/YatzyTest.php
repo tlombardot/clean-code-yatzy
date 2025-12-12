@@ -12,9 +12,9 @@ class YatzyTest extends TestCase
     public function testChanceScoresSumOfAllDice(): void
     {
         $expected = 15;
-        $actual = yatzy::addSommeDice(2, 3, 4, 5, 1);
+        $actual = yatzy::addSumDice(2, 3, 4, 5, 1);
         self::assertSame($expected, $actual);
-        self::assertSame(16, yatzy::addSommeDice(3, 3, 4, 5, 1));
+        self::assertSame(16, yatzy::addSumDice(3, 3, 4, 5, 1));
     }
 
     public function testYatzyScores50(): void
