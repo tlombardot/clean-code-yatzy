@@ -40,15 +40,11 @@ class Yatzy
      */
     public static function yatzyScore(array $dices): int
     {
-        $counts = array_fill(0, 6, 0);
-        foreach ($dices as $dice) {
-            ++$counts[$dice - 1]; //Incomprehensible
+        $counts = array_count_values($dices);
+        if (in_array(5, $counts)) {
+            return 50;
         }
-        foreach (range(0, count($counts) - 1) as $i) {
-            if ($counts[$i] === 5) {            //à refaire compliquer à comprendre
-                return 50;
-            }
-        }
+
         return 0;
     }
 
