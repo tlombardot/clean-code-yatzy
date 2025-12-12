@@ -51,39 +51,17 @@ class Yatzy
     /**
      * @param array<int, int> $dices
      */
-    public static function numberOfOnes(array $dices): int
+    public static function numberOfValue(array $dices, int $value): int
     {
         $sum = 0;
         foreach ($dices as $dice) {
-            if($dice === 1) {
-                $sum += 1;
+            if($dice === $value) {
+                $sum += $value;
             }
         }
         return $sum;
     }
 
-    //Même chose pour la suite
-    public static function twos(int $d1, int $d2, int $d3, int $d4, int $d5): int
-    {
-        $sum = 0;
-        if ($d1 === 2) {
-            $sum += 2;
-        }
-        if ($d2 === 2) {
-            $sum += 2;
-        }
-        if ($d3 === 2) {
-            $sum += 2;
-        }
-        if ($d4 === 2) {
-            $sum += 2;
-        }
-        if ($d5 === 2) {
-            $sum += 2;
-        }
-
-        return $sum;
-    }
 
     public static function threes(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
